@@ -138,7 +138,13 @@ BODY
   width:100%;
   z-index:1;
   background-color:#233045;
-  /* background-image:url('<%-req.jshsite.publicurl%>images/top.flat.png'); */
+  background-image:linear-gradient(
+    to bottom,
+    #233045 0%,
+    #233045 77%,
+    #131C2B 77%,
+    #131C2B 100%
+); 
   background-repeat:repeat-x;
 }
 <%-rootcss%> .xhead.unfixed {
@@ -162,8 +168,8 @@ BODY
 <%-rootcss%> .xtbl thead th {
 	text-align:left;
 	font-weight:normal;
-  color:#d3d3d3;
-  background-color:#1E2738;
+  color:#fff;
+  background-color:#0E98CC;
   padding:7px 7px 6px 7px;
   border-top:1px solid #ededed91;
   border-bottom:2px solid #ededed91;
@@ -171,7 +177,7 @@ BODY
 	border-left:1px solid #ededed91;
 }
 <%-rootcss%> .xtbl thead th a {
-	color:#d3d3d3;
+	color:#fff;
 	display:block;
 }
 <%-rootcss%> .xtbl tbody {
@@ -200,7 +206,7 @@ BODY
   color:#555;
 }
 <%-rootcss%> a.xtab,<%-rootcss%> a.xtab:visited{
-  background-color:#f2f2f2;
+  background-color:#1E2738;
   color:#555;
 	padding:5px 15px;
 	margin-right:1px;
@@ -316,9 +322,9 @@ BODY
   color: #333;
 }
 <%-rootcss%> .xform .htmlarea_container { border: none; }
-<%-rootcss%> .xform_ctrl.tree a.tree_item { color: #333; }
+<%-rootcss%> .xform_ctrl.tree a.tree_item { color: #d3d3d3; }
 <%-rootcss%> .xform_ctrl.tree { border-color: #ddd; }
-<%-rootcss%> .xform_ctrl.tree a.tree_item.selected { background-color:#f8f8f8; }
+<%-rootcss%> .xform_ctrl.tree a.tree_item.selected { background-color:#171F2E; }
 <%-jshElementSelector%>.xdebugconsole .res-ns{ height: 1px; }
 <%-jshElementSelector%>.xdebugconsole .res-ew{ width: 1px; }
 <%-jshElementSelector%>.xdebugconsole header{ background-color:#f2f2f2; }
@@ -380,7 +386,7 @@ MENU STYLES
 	text-decoration:none;
 }
 <%-rootcss%> .xmenuhorizontal .xmenu a.selected .bottom{
-	background-image:url('<%-req.jshsite.publicurl%>images/menu_highlight_bl.png');
+	/*background-image:url('<%-req.jshsite.publicurl%>images/menu_highlight_bl.png');*/
 	width:6px;
 	height:10px;
 	display:block;
@@ -521,10 +527,10 @@ MENU STYLES
 	text-decoration:none;
 }
 <%-rootcss%> .xhead .xtoplinks {
-	background-color:#475873;
+	background-color:#00BFFF;
 }
 <%-rootcss%> .xhead .xtoplinks:before{
-  border-top-color:#475873;
+  border-top-color:#00BFFF;
 }
 
 
