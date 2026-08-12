@@ -576,36 +576,134 @@ VERTICAL MENU STYLES
 ***************************/
 
 <%-rootcss%> .xmenuvertical {
-  position:absolute;
+  position:fixed;
   top:0px;
+  bottom:0px;
   left:0px;
-  width:220px;
-  height:100%;
+  width:270px;
+  background-color:#233045;
 }
 
 <%-rootcss%> .xmenuvertical .xmenu {
   display:block;
-  width:220px;
+  position:absolute;
+  top:100px;
+  width:270px;
+  outline:1px solid red;
 }
 
 <%-rootcss%> .xmenuvertical .xmenuitem {
   display:block;
-  width:220px;
+  position:relative;
+  width:270px;
+  height:42px;
   box-sizing:border-box;
+  padding-left:64px;
+  line-height:42px;
+}
+
+<%-rootcss%> .xmenuvertical .xmenuitem_icon {
+  display:block;
+  position:absolute;
+  left:25.5px;
+  top:50%;
+  width:30px;
+  height:30px;
+  transform:translateY(-50%);
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:contain;
+  border:1px solid #ddd;
+}
+
+<%-rootcss%> .xmenuvertical .xmenuitem_label {
+  display:block;
+  padding-left:10px;
+  color:#dfdfdf;
 }
 
 <%-rootcss%> .xmenuvertical .xsubmenu {
   display:none;
-  position:absolute;
+  position:fixed;
   top:0px;
-  left:220px;
+  bottom:0px;
+  padding-top:70px;
+  left:270px;
   width:220px;
+  background-color:#131C2B;
+  outline:1px solid green;
 }
 
 <%-rootcss%> .xmenuvertical .xsubmenuitem {
   display:block;
+  padding-left:10px;
   width:220px;
   box-sizing:border-box;
+  color: #dfdfdf;
+}
+
+<%-rootcss%> .xmenuvertical_collapse {
+  display:block;
+  position:fixed;
+  left:25.5px;
+  top:18.5px;
+  width:30px;
+  height:30px;
+  z-index:20;
+  outline:1px solid white;
+}
+
+<%-rootcss%> .xmenuvertical .xmenuitem.selected {
+  background-color:#0E98CC;
+}
+
+<%-rootcss%> .xhead.xhead_vertical {
+  position:static;
+  width:270px;
+  height:100%;
+  background:none;
+}
+
+<%-rootcss%> .xhead_vertical .xlogo {
+  position:fixed;
+  top:0px;
+  left:0px;
+  z-index:10;
+}
+
+<%-rootcss%> .xhead_vertical .xtoplinks {
+  display:block;
+  position: fixed;
+  width:270px;
+  top:auto;
+  right:auto;
+  bottom:0px;
+  left:0px;
+  z-index:10;
+  outline:1px solid red;
+}
+
+/* VERTICAL COLLAPSED */
+
+<%-rootcss%> .xmenuvertical.collapsed {
+  width:80px;
+}
+
+<%-rootcss%> .xmenuvertical.collapsed .xmenu {
+  width:80px;
+}
+
+<%-rootcss%> .xmenuvertical.collapsed .xmenuitem {
+  width:80px;
+  padding-left:0px;
+}
+
+<%-rootcss%> .xmenuvertical.collapsed .xmenuitem_label {
+  display:none;
+}
+
+<%-rootcss%> .xmenuvertical.collapsed .xsubmenu {
+  left:80px;
 }
 
 

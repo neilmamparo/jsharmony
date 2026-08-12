@@ -473,6 +473,7 @@ exports = module.exports = function(jsh){
         if(jSubMenu.length){
           if((_this.menuid == menuid) && jSubMenu.is(':visible')){
             jSubMenu.hide();
+            jsh.$root('.xbody').css('margin-left', jsh.$root('.xmenuvertical').outerWidth() + 'px');
           }
           else{
             _this.menuid = menuid;
@@ -505,10 +506,14 @@ exports = module.exports = function(jsh){
       }
     }
 
-    jsh.$root('.xmenuvertical_collapse').click(function () {
-      _this.ToggleCollapsed();
-      return false;
-    });
+      jsh.$root('.xmenuvertical_collapse').click(function(e){
+        e.preventDefault();
+        e.stopImmediatePropagation();
+
+        _this.ToggleCollapsed();
+
+        return false;
+      });
   };
 
   //Update the currently selected menu item
@@ -668,8 +673,11 @@ exports = module.exports = function(jsh){
     jsh.$root('.xsubmenu').hide();
     jsh.$root('.xsubmenuside').hide().empty();
 
+    jsh.$root('.xbody').css('margin-left', jsh.$root('.xmenuvertical').outerWidth() + 'px');
+
     if (jSubMenu.size() > 0) {
       jSubMenu.show();
+      jsh.$root('.xbody').css('margin-left', (jsh.$root('.xmenuvertical').outerWidth() + jSubMenu.outerWidth()) + 'px');
       jSubMenu.$find('a, div').each(function (i, obj) {
         if ($(obj).hasClass('xsubmenu_more')) return;
         _this.SubMenuItems.push($(obj));
@@ -743,6 +751,7 @@ exports = module.exports = function(jsh){
     jsh.$root('.xsubmenu').hide();
     jsh.$root('.xmenuside').hide();
     jsh.$root('.xsubmenuside').hide();
+    if(jmenu.hasClass('collapsed')) jsh.$root('.xbody').css('margin-left', '80px'); else jsh.$root('.xbody').css('margin-left', '270px');
     _this.RefreshLayout();
   };
 
