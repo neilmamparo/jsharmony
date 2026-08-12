@@ -227,7 +227,7 @@ CUSTOM CONTROL STYLES
 <%-rootcss%> .xform_button.highlighted { background-color:yellow; border:1px dashed #666; }
 
 /***************************
-MENU STYLES
+HORIZONTAL MENU STYLES
 ***************************/
 <%-rootcss%> .xmenuhorizontal .xmenu {
 	padding-top:34px;
@@ -398,6 +398,43 @@ MENU STYLES
 }
 <%-rootcss%> .xmenuhorizontal .xsubmenuside a.selected:hover {
 	text-decoration:none;
+}
+
+/***************************
+VERTICAL MENU STYLES
+***************************/
+
+<%-rootcss%> .xmenuvertical {
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:220px;
+  height:100%;
+}
+
+<%-rootcss%> .xmenuvertical .xmenu {
+  display:block;
+  width:220px;
+}
+
+<%-rootcss%> .xmenuvertical .xmenuitem {
+  display:block;
+  width:220px;
+  box-sizing:border-box;
+}
+
+<%-rootcss%> .xmenuvertical .xsubmenu {
+  display:none;
+  position:absolute;
+  top:0px;
+  left:220px;
+  width:220px;
+}
+
+<%-rootcss%> .xmenuvertical .xsubmenuitem {
+  display:block;
+  width:220px;
+  box-sizing:border-box;
 }
 
 /*
